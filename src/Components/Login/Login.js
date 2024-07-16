@@ -9,8 +9,6 @@ const Login = () => {
 
     // State variables for email and password
     const [password, setPassword] = useState("");
-    const [name, setName] = useState('');
-    const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
 
     // Get navigation function from react-router-dom
@@ -79,19 +77,33 @@ const Login = () => {
                     <div className="login-form">
                         <form onSubmit={login}>
                             <div className="form-group">
-                                <label htmlFor="name">Name</label>
-                                <input value={name} type="text" onChange={(e) => setName(e.target.value)} name="name" id="name" className="form-control" placeholder="Enter your name" aria-describedby="helpId" />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="phone">Phone</label>
-                                <input value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" name="phone" id="phone" className="form-control" placeholder="Enter your phone number" aria-describedby="helpId" />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="password">Password</label>
-                                <input value={password} onChange={(e) => setPassword(e.target.value)} name="password" id="password" className="form-control" placeholder="Enter your password" aria-describedby="helpId" />
-
+                                <label htmlFor="email">Email</label>
+                                {/* Input field for email */}
+                                <input
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    className="form-control"
+                                    placeholder="Enter your email"
+                                    aria-describedby="helpId"
+                                />
                             </div>
                             {/* Input field for password */}
+                            <div className="form-group">
+                                <label htmlFor="password">Password</label>
+                                <input
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                    className="form-control"
+                                    placeholder="Enter your password"
+                                    aria-describedby="helpId"
+                                />
+                            </div>
                             <div className="btn-group">
                                 {/* Login button */}
                                 <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">
