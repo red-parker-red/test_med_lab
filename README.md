@@ -1,0 +1,1 @@
+This is a help document for users accessing the medical appointment booking website
